@@ -4,3 +4,4 @@ import app.models.department
 import app.models.company
 import app.models.user
 import app.models.team
+import app.models.kpi

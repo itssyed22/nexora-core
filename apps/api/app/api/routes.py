@@ -5,6 +5,7 @@ from app.api.health import router as health_router
 from app.api.company import router as company_router
 from app.api.user import router as user_router
 from app.api.team import router as team_router
+from app.api.kpi import router as kpi_router
 router = APIRouter()
 
 router.include_router(auth_router)
@@ -15,3 +16,5 @@ router.include_router(user_router)
 router.include_router(department_router)
 
 router.include_router(team_router)
+
+router.include_router(kpi_router)
