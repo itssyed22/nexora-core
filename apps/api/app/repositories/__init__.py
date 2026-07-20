@@ -1,1 +1,4 @@
 from app.repositories.kpi_repository import KPIRepository
+from app.repositories.kpi_update_repository import KPIUpdateRepository
+from app.repositories.achievement_repository import AchievementRepository
+from app.repositories.task_repository import TaskRepository

@@ -6,15 +6,22 @@ from app.api.company import router as company_router
 from app.api.user import router as user_router
 from app.api.team import router as team_router
 from app.api.kpi import router as kpi_router
+from app.api.kpi_update import router as kpi_update_router
+from app.api.achievement import router as achievement_router
+from app.api.task import router as task_router
+
 router = APIRouter()
 
 router.include_router(auth_router)
 router.include_router(health_router)
 router.include_router(company_router)
 router.include_router(user_router)
-
+router.include_router(achievement_router)
 router.include_router(department_router)
 
 router.include_router(team_router)
 
 router.include_router(kpi_router)
+router.include_router(kpi_update_router)
+
+router.include_router(task_router)
