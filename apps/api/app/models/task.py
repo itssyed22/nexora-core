@@ -49,12 +49,40 @@ class Task(Base):
         default="Pending",
     )
 
+    estimated_hours: Mapped[float] = mapped_column(
+    default=0,
+    )
+
+    actual_hours: Mapped[float] = mapped_column(
+    default=0,
+    )
+
+    progress_percentage: Mapped[float] = mapped_column(
+    default=0,
+    )
+
     due_date: Mapped[date] = mapped_column(
         Date,
         nullable=False,
     )
 
+    start_date: Mapped[date] = mapped_column(
+    Date,
+    nullable=False,
+    )
+
+    completed_at: Mapped[datetime | None] = mapped_column(
+    DateTime,
+    nullable=True,
+    )
+
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
         default=datetime.utcnow,
+    )
+
+    updated_at: Mapped[datetime] = mapped_column(
+    DateTime,
+    default=datetime.utcnow,
+    onupdate=datetime.utcnow,
     )

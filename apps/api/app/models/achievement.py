@@ -19,6 +19,11 @@ class Achievement(Base):
         nullable=False,
     )
 
+    company_id: Mapped[int] = mapped_column(
+    ForeignKey("companies.id"),
+    nullable=False,
+    )
+
     title: Mapped[str] = mapped_column(
         String(200),
         nullable=False,
@@ -34,7 +39,22 @@ class Achievement(Base):
         default="General",
     )
 
+    points: Mapped[int] = mapped_column(
+    default=0,
+    )
+
+    badge_type: Mapped[str] = mapped_column(
+    String(100),
+    default="Bronze",
+    )
+
     created_at: Mapped[datetime] = mapped_column(
         DateTime,
         default=datetime.utcnow,
+    )
+
+    updated_at: Mapped[datetime] = mapped_column(
+    DateTime,
+    default=datetime.utcnow,
+    onupdate=datetime.utcnow,
     )

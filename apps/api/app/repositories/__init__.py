@@ -2,3 +2,9 @@ from app.repositories.kpi_repository import KPIRepository
 from app.repositories.kpi_update_repository import KPIUpdateRepository
 from app.repositories.achievement_repository import AchievementRepository
 from app.repositories.task_repository import TaskRepository
+from app.repositories.dashboard_repository import DashboardRepository
+from app.repositories.dashboard_analytics_repository import DashboardAnalyticsRepository
+from app.repositories.department_analytics_repository import (
+    DepartmentAnalyticsRepository,
+)
+from app.repositories.top_employee_repository import TopEmployeeRepository

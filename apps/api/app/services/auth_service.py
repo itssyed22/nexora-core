@@ -34,6 +34,13 @@ class AuthService:
         )
 
         return {
-            "access_token": token,
-            "token_type": "bearer",
+        "access_token": token,
+        "token_type": "bearer",
+        "user": {
+        "id": user.id,
+        "first_name": user.first_name,
+        "last_name": user.last_name,
+        "email": user.email,
+        "role": user.role,
+         },
         }

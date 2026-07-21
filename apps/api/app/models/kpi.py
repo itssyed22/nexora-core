@@ -68,6 +68,19 @@ class KPI(Base):
         String(50),
         default="Medium",
     )
+    weight: Mapped[int] = mapped_column(
+    default=1,
+    )
+
+    progress_percentage: Mapped[float] = mapped_column(
+    Float,
+    default=0,
+    )
+
+    score: Mapped[float] = mapped_column(
+    Float,
+    default=0,
+    )
 
     start_date: Mapped[date] = mapped_column(
         Date,

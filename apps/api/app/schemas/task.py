@@ -12,6 +12,11 @@ class TaskCreate(BaseModel):
     priority: str = "Medium"
     status: str = "Pending"
     due_date: date
+    estimated_hours: float = 0
+    actual_hours: float = 0
+    progress_percentage: float = 0
+
+    start_date: date
 
 
 class TaskResponse(BaseModel):
@@ -25,6 +30,13 @@ class TaskResponse(BaseModel):
     status: str
     due_date: date
     created_at: datetime
+    estimated_hours: float
+    actual_hours: float
+    progress_percentage: float
+
+    start_date: date
+    completed_at: datetime | None
+    updated_at: datetime
 
     model_config = {
         "from_attributes": True

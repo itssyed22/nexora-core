@@ -23,6 +23,10 @@ class KPICreate(BaseModel):
     start_date: date
     due_date: date
 
+    weight: int = 1
+    progress_percentage: float = 0
+    score: float = 0
+
 
 class KPIResponse(BaseModel):
     id: int
@@ -45,6 +49,10 @@ class KPIResponse(BaseModel):
 
     start_date: date
     due_date: date
+
+    weight: int
+    progress_percentage: float
+    score: float
 
     model_config = {
         "from_attributes": True
